@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bswgtxlo4sy70"]
+
+[node name="TestSceneTilemap" type="Node2D"]
+
+[node name="GameTileMap" type="Node2D" parent="."]
+
+[node name="Water" type="Node2D" parent="GameTileMap"]

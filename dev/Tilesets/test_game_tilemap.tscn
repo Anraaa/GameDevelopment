@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=4 uid="uid://qne5o7bjnrrx"]
+[gd_scene load_steps=3 format=4 uid="uid://qne5o7bjnrrx"]
 
 [ext_resource type="TileSet" uid="uid://ybhuvqbgtmw7" path="res://Tilesets/game_tile_set.tres" id="1_hwigi"]
+[ext_resource type="PackedScene" uid="uid://dbttvcy1xjt4x" path="res://scenes/characters/player/player.tscn" id="2_35clv"]
 
 [node name="TestGameTilemap" type="Node2D"]
 
@@ -28,3 +29,6 @@ tile_set = ExtResource("1_hwigi")
 position = Vector2(-61, -130)
 tile_map_data = PackedByteArray("AAAUAAUABQAAAAAAAQA=")
 tile_set = ExtResource("1_hwigi")
+
+[node name="Player" parent="." instance=ExtResource("2_35clv")]
+position = Vector2(124, 133)
