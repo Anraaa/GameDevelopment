@@ -1,36 +1,35 @@
 [gd_scene load_steps=8 format=3 uid="uid://hmvyuo3gudip"]
 
 [ext_resource type="Texture2D" uid="uid://5fw4vyll22a7" path="res://assets/game/Objects/Basic_Grass_Biom_things.png" id="1_ku5ue"]
-[ext_resource type="Script" uid="uid://dm1wrs5kjknvl" path="res://scenes/components/hit_component.gd" id="2_y65iw"]
+[ext_resource type="PackedScene" uid="uid://b6vcxafwryaha" path="res://scenes/components/hurt_component.tscn" id="2_h4jc8"]
+[ext_resource type="Script" uid="uid://chvdgspcovto0" path="res://scenes/object/trees/small_tree.gd" id="2_y65iw"]
 [ext_resource type="PackedScene" uid="uid://dhrrlwfgng8j2" path="res://scenes/components/damage_component.tscn" id="3_8v68l"]
-[ext_resource type="PackedScene" uid="uid://c4v2aso7vsed7" path="res://scenes/components/hit_component.tscn" id="4_kklvk"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h4jc8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ku5ue"]
 atlas = ExtResource("1_ku5ue")
-region = Rect2(0.3258934, 0.41475868, 15.512888, 29.26227)
+region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ku5ue"]
-radius = 4.0
+radius = 4.1231055
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8v68l"]
-size = Vector2(9, 20)
+size = Vector2(8, 21)
 
 [node name="SmallTree" type="Sprite2D"]
-texture = SubResource("AtlasTexture_h4jc8")
+texture = SubResource("AtlasTexture_ku5ue")
 script = ExtResource("2_y65iw")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 9)
+position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_ku5ue")
 
-[node name="DamageComponent" parent="." instance=ExtResource("3_8v68l")]
+[node name="HurtComponent" parent="." instance=ExtResource("2_h4jc8")]
 
-[node name="HitComponent" parent="." instance=ExtResource("4_kklvk")]
-position = Vector2(2.8326836, -17.105007)
-
-[node name="HitComponentCollisionShape2D" type="CollisionShape2D" parent="HitComponent"]
-position = Vector2(-2.8326836, 20.105007)
+[node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_8v68l")
-debug_color = Color(0.9796575, 0, 0.39011192, 0.41960785)
+debug_color = Color(0.81066585, 0.0021772427, 0.98751086, 0.41960785)
+
+[node name="DamageComponent" parent="." instance=ExtResource("3_8v68l")]

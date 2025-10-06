@@ -1,12 +1,15 @@
-[gd_resource type="TileSet" load_steps=14 format=3 uid="uid://ybhuvqbgtmw7"]
+[gd_resource type="TileSet" load_steps=25 format=3 uid="uid://ybhuvqbgtmw7"]
 
 [ext_resource type="Texture2D" uid="uid://gvrd8epp0u4v" path="res://assets/game/Tilesets/Water.png" id="1_m70i2"]
 [ext_resource type="Texture2D" uid="uid://j6s6fkd11nit" path="res://assets/game/Tilesets/Grass.png" id="2_cbdxd"]
 [ext_resource type="Texture2D" uid="uid://c4xjrc5cxg7po" path="res://assets/game/Tilesets/Tilled_Dirt_Wide.png" id="3_hu6sp"]
 [ext_resource type="Texture2D" uid="uid://5fw4vyll22a7" path="res://assets/game/Objects/Basic_Grass_Biom_things.png" id="4_xwv23"]
 [ext_resource type="PackedScene" uid="uid://codmhc0maqqv4" path="res://scenes/houses/LargeHouse.tscn" id="5_0b0mn"]
+[ext_resource type="Script" uid="uid://dm1wrs5kjknvl" path="res://scenes/components/hit_component.gd" id="6_mt8is"]
 [ext_resource type="PackedScene" uid="uid://hmvyuo3gudip" path="res://scenes/object/trees/small_tree.tscn" id="6_pi5w0"]
-[ext_resource type="PackedScene" uid="uid://ixc4gujrlevy" path="res://scenes/object/trees/small_trees.tscn" id="7_ow828"]
+[ext_resource type="PackedScene" uid="uid://dhrrlwfgng8j2" path="res://scenes/components/damage_component.tscn" id="7_o2x3h"]
+[ext_resource type="PackedScene" uid="uid://c4v2aso7vsed7" path="res://scenes/components/hit_component.tscn" id="8_tmfy7"]
+[ext_resource type="PackedScene" uid="uid://b6vcxafwryaha" path="res://scenes/components/hurt_component.tscn" id="9_skfke"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbdxd"]
 texture = ExtResource("1_m70i2")
@@ -492,10 +495,57 @@ texture = ExtResource("4_xwv23")
 6:4/0 = 0
 8:4/0 = 0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4jc8"]
+atlas = ExtResource("4_xwv23")
+region = Rect2(0.3258934, 0.41475868, 15.512888, 29.26227)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ku5ue"]
+radius = 4.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8v68l"]
+size = Vector2(9, 20)
+
+[sub_resource type="PackedScene" id="PackedScene_tl0r4"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("SmallTree", "Sprite2D", "texture", "script", "StaticBody2D", "StaticBody2D", "CollisionShape2D", "CollisionShape2D", "position", "shape", "DamageComponent", "HitComponent", "position", "HitComponentCollisionShape2D", "CollisionShape2D", "position", "shape", "debug_color"),
+"node_count": 6,
+"node_paths": [NodePath("."), NodePath("./StaticBody2D"), NodePath("."), NodePath("."), NodePath("./HitComponent")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 1073741824, 0, 5, 4, -1, 0, 0, 1073741825, 0, 7, 6, -1, 2, 8, 2, 9, 3, 0, 1073741826, 0, 2147483647, 10, 4, 0, 0, 1073741827, 0, 2147483647, 11, 5, 1, 12, 6, 0, 1073741828, 0, 14, 13, -1, 3, 15, 7, 16, 8, 17, 9, 0),
+"variants": [SubResource("AtlasTexture_h4jc8"), ExtResource("6_mt8is"), Vector2(0, 9), SubResource("CircleShape2D_ku5ue"), ExtResource("7_o2x3h"), ExtResource("8_tmfy7"), Vector2(2.8326836, -17.105007), Vector2(-2.8326836, 20.105007), SubResource("RectangleShape2D_8v68l"), Color(0.9796575, 0, 0.39011192, 0.41960785)],
+"version": 3
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04jcb"]
+atlas = ExtResource("4_xwv23")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_04jcb"]
+radius = 4.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxb85"]
+size = Vector2(9, 20)
+
+[sub_resource type="PackedScene" id="PackedScene_qblla"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("SmallTree", "Sprite2D", "position", "texture", "StaticBody2D", "StaticBody2D", "CollisionShape2D", "CollisionShape2D", "position", "shape", "HurtComponent", "tool", "HurtComponentCollisionShape2D", "CollisionShape2D", "position", "shape", "debug_color", "DamageComponent"),
+"node_count": 6,
+"node_paths": [NodePath("."), NodePath("./StaticBody2D"), NodePath("."), NodePath("./HurtComponent"), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 1073741824, 0, 5, 4, -1, 0, 0, 1073741825, 0, 7, 6, -1, 2, 8, 2, 9, 3, 0, 1073741826, 0, 2147483647, 10, 4, 1, 11, 5, 0, 1073741827, 0, 13, 12, -1, 3, 14, 6, 15, 7, 16, 8, 0, 1073741828, 0, 2147483647, 17, 9, 0, 0),
+"variants": [Vector2(0, -12), SubResource("AtlasTexture_04jcb"), Vector2(0, 9), SubResource("CircleShape2D_04jcb"), ExtResource("9_skfke"), 1, Vector2(0, 3), SubResource("RectangleShape2D_kxb85"), Color(0.9796575, 0, 0.39011192, 0.41960785), ExtResource("7_o2x3h")],
+"version": 3
+}
+
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_0b0mn"]
 scenes/1/scene = ExtResource("5_0b0mn")
-scenes/2/scene = ExtResource("6_pi5w0")
-scenes/3/scene = ExtResource("7_ow828")
+scenes/2/scene = SubResource("PackedScene_tl0r4")
+scenes/3/scene = SubResource("PackedScene_qblla")
+scenes/4/scene = ExtResource("6_pi5w0")
 
 [resource]
 terrain_set_0/mode = 0

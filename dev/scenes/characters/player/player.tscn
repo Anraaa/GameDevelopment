@@ -397,8 +397,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_t61fv"]
 radius = 4.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_djydg"]
-radius = 3.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_3xnwo"]
+radius = 2.0
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
@@ -445,9 +445,7 @@ player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 
 [node name="HitComponent" parent="." instance=ExtResource("10_3xnwo")]
-collision_layer = 1
-collision_mask = 1
 
 [node name="HitComponentCollisionShape2D" type="CollisionShape2D" parent="HitComponent"]
-shape = SubResource("CircleShape2D_djydg")
-debug_color = Color(1, 0.016769933, 0.018964287, 0.41960785)
+shape = SubResource("CircleShape2D_3xnwo")
+debug_color = Color(0.79530483, 0.36180222, 0.5859788, 0.41960785)
