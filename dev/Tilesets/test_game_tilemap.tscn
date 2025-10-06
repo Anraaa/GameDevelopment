@@ -31,4 +31,4 @@ tile_map_data = PackedByteArray("AAAUAAUABQAAAAAAAQA=")
 tile_set = ExtResource("1_hwigi")
 
 [node name="Player" parent="." instance=ExtResource("2_35clv")]
-position = Vector2(124, 133)
+position = Vector2(318, 200)
