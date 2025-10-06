@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b3jodvpntqsm8"]
+[gd_scene load_steps=15 format=3 uid="uid://b3jodvpntqsm8"]
 
 [ext_resource type="Texture2D" uid="uid://d2wdh3kq45c5i" path="res://assets/game/Tilesets/Doors.png" id="1_53n30"]
 [ext_resource type="Script" uid="uid://br53imuud7svl" path="res://scenes/Houses/door.gd" id="1_tw81x"]
@@ -11,10 +11,6 @@ region = Rect2(0, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_tw81x"]
 atlas = ExtResource("1_53n30")
 region = Rect2(0, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fq24b"]
-atlas = ExtResource("1_53n30")
-region = Rect2(0, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hpj4g"]
 atlas = ExtResource("1_53n30")
@@ -50,12 +46,9 @@ animations = [{
 "texture": SubResource("AtlasTexture_tw81x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fq24b")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_hpj4g")
 }],
-"loop": true,
+"loop": false,
 "name": &"close_door",
 "speed": 5.0
 }, {
@@ -63,7 +56,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pw7lp")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }, {
@@ -80,7 +73,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_s876u")
 }],
-"loop": true,
+"loop": false,
 "name": &"open_door",
 "speed": 5.0
 }]
@@ -96,7 +89,10 @@ script = ExtResource("1_tw81x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xupo6")
+animation = &"close_door"
 autoplay = "default"
+frame = 2
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_53n30")
