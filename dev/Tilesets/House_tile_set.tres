@@ -102,7 +102,7 @@ texture = ExtResource("2_u7uid")
 scenes/1/scene = ExtResource("3_odgvy")
 
 [resource]
-physics_layer_0/collision_layer = 0
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_u7uid")
 sources/1 = SubResource("TileSetAtlasSource_odgvy")
 sources/2 = SubResource("TileSetScenesCollectionSource_knkq4")
