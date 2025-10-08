@@ -475,6 +475,8 @@ texture = ExtResource("4_xwv23")
 6:2/0 = 0
 5:2/0 = 0
 4:2/0 = 0
+4:2/0/y_sort_origin = -4
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.0057983, -3.925634, 1.6619492, -3.6963997, 4.068905, -1.2894421, 4.412758, 5.014495, 0.114616394, 6.2179747, -4.1835213, 5.2437286, -4.0115967, -1.0602083)
 3:2/0 = 0
 2:2/0 = 0
 3:1/0 = 0
@@ -548,6 +550,7 @@ scenes/3/scene = SubResource("PackedScene_qblla")
 scenes/4/scene = ExtResource("6_pi5w0")
 
 [resource]
+physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "GrassTerrain"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
