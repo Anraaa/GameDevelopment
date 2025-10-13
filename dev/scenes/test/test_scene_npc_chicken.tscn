@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://xnaeui78une5" path="res://scenes/characters/chicken/chicken.tscn" id="3_6nbhr"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_6nbhr"]
-vertices = PackedVector2Array(216.24219, 161.25781, 230.99219, 186.53906, 189.38281, 219.50781, 149.60938, 203.13281, 147.27344, 163.4375, 169.09375, 145.25781)
+vertices = PackedVector2Array(249.38281, 132.32813, 279.77344, 195.64844, 226.20313, 244.96875, 133.79688, 221.65625, 146.60156, 161.92188, 162.42969, 122.75781)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(223, 153, 244, 189, 191, 231, 140, 210, 137, 159, 167, 134)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(256, 123, 292, 198, 229, 256, 122, 229, 137, 159, 156, 112)])
 
 [node name="TestSceneNPCChicken" type="Node2D"]
 y_sort_enabled = true
