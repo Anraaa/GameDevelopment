@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://y02orp872jlc" path="res://scenes/characters/player/player.gd" id="1_6avc5"]
 [ext_resource type="Texture2D" uid="uid://bxgf8xmj0fhuv" path="res://assets/game/Characters/Basic Charakter Actions.png" id="1_t61fv"]
 [ext_resource type="Texture2D" uid="uid://cgu04qjcktkxp" path="res://assets/game/Characters/Basic Charakter Spritesheet.png" id="2_686vu"]
-[ext_resource type="Script" uid="uid://dv063cjpjs8lc" path="res://scenes/node_state_machine.gd" id="3_hss88"]
+[ext_resource type="Script" uid="uid://dv063cjpjs8lc" path="res://scripts/state_machine/node_state_machine.gd" id="3_hss88"]
 [ext_resource type="Script" uid="uid://bfm6riibj4i8d" path="res://scenes/characters/player/idle_state.gd" id="4_qd3e3"]
 [ext_resource type="Script" uid="uid://c50dvsyf0yk5n" path="res://scenes/characters/player/walk_state.gd" id="5_qd3e3"]
 [ext_resource type="Script" uid="uid://brcw4bbbfwyqu" path="res://scenes/characters/player/chopping_state.gd" id="7_mk55u"]
