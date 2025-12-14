@@ -7,13 +7,16 @@
 radius = 6.0827627
 
 [node name="TomatoHarvest" type="Sprite2D"]
+z_index = 1
 texture = ExtResource("1_fixai")
 hframes = 6
 vframes = 2
 frame = 11
 
 [node name="CollectableComponent" parent="." instance=ExtResource("2_hcjra")]
+z_index = 1
 collectable_name = "tomato"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent"]
+z_index = 1
 shape = SubResource("CircleShape2D_r4ph2")
