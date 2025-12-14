@@ -56,6 +56,7 @@ tile_set = ExtResource("1_i04cp")
 [node name="Player" parent="." instance=ExtResource("2_3aka8")]
 z_index = 1
 position = Vector2(565, 285)
+current_tool = 0
 
 [node name="Chickens" type="Node2D" parent="."]
 
