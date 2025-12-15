@@ -400,17 +400,17 @@ radius = 4.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_3xnwo"]
 radius = 2.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_6avc5")
 current_tool = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_omk8d")
 animation = &"watering_left"
 autoplay = "idle_front"
+offset = Vector2(0, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
