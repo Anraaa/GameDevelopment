@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b16l0830aey38"
-path="res://.godot/imported/Tilled_Dirt_Wide_v2.png-7067f0efaf3edd0774b7efe07207a7d3.ctex"
+path="res://.godot/imported/Tilled_Dirt_Wide_cropfield.png-df567707452185bedf9c036e8e8b3a64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game/Tilesets/Tilled_Dirt_Wide_v2.png"
-dest_files=["res://.godot/imported/Tilled_Dirt_Wide_v2.png-7067f0efaf3edd0774b7efe07207a7d3.ctex"]
+source_file="res://assets/game/Tilesets/Tilled_Dirt_Wide_cropfield.png"
+dest_files=["res://.godot/imported/Tilled_Dirt_Wide_cropfield.png-df567707452185bedf9c036e8e8b3a64.ctex"]
 
 [params]
 
