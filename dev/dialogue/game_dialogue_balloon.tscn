@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_cindb"]
 [ext_resource type="Theme" uid="uid://dku8v1kw8bbsr" path="res://dialogue/dialogue_balloon_theme.tres" id="2_xkmgq"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_aimjp"]
-[ext_resource type="PackedScene" uid="uid://d0dx7621aq116" path="res://scenes/ui/emotes_panel2.tscn" id="4_vwqec"]
+[ext_resource type="PackedScene" uid="uid://bi4ke5yiqe4pf" path="res://scenes/ui/emotes_panel.tscn" id="3_vwqec"]
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
@@ -80,9 +80,8 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="EmotesPanel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" instance=ExtResource("4_vwqec")]
+[node name="EmotesPanel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" instance=ExtResource("3_vwqec")]
 layout_mode = 2
-script = null
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
