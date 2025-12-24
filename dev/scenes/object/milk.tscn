@@ -7,6 +7,7 @@
 radius = 7.071068
 
 [node name="Milk" type="Sprite2D"]
+z_index = 1
 texture = ExtResource("1_pquhh")
 hframes = 4
 frame = 2
