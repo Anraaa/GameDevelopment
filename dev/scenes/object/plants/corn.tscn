@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://b877pfa581gvm"]
+[gd_scene load_steps=11 format=3 uid="uid://b877pfa581gvm"]
 
 [ext_resource type="Texture2D" uid="uid://b840fptisab27" path="res://assets/game/Objects/Basic_Plants.png" id="1_7i2y0"]
 [ext_resource type="Script" uid="uid://dgcg83ge1a2d1" path="res://scenes/object/plants/corn.gd" id="1_hmplj"]
 [ext_resource type="PackedScene" uid="uid://b6vcxafwryaha" path="res://scenes/components/hurt_component.tscn" id="2_cqlgp"]
+[ext_resource type="PackedScene" uid="uid://cbfuuxjdp1af2" path="res://scenes/object/plants/corn_harvest.tscn" id="2_jbag2"]
 [ext_resource type="PackedScene" uid="uid://lvq56788orbo" path="res://scenes/object/plants/watering_particles.tscn" id="2_qhos1"]
 [ext_resource type="PackedScene" uid="uid://b4notdntde4wp" path="res://scenes/object/plants/flowering_particles.tscn" id="3_1b2o8"]
 [ext_resource type="PackedScene" uid="uid://c2oahvkbdf4o4" path="res://scenes/object/plants/growth_cycle_component.tscn" id="5_in7oj"]
@@ -13,12 +14,12 @@
 size = Vector2(15, 8)
 
 [node name="Corn" type="Node2D"]
-y_sort_enabled = true
+z_index = 1
 script = ExtResource("1_hmplj")
+harvest_drop_scene = ExtResource("2_jbag2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(0, -4)
 texture = ExtResource("1_7i2y0")
 hframes = 6
 vframes = 2
