@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ycpccxjfnsy0"
+path="res://.godot/imported/23 Elli's Theme.mp3-3134af5b90c16d60f6b1fd5a63418827.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/music/23 Elli's Theme.mp3"
+dest_files=["res://.godot/imported/23 Elli's Theme.mp3-3134af5b90c16d60f6b1fd5a63418827.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

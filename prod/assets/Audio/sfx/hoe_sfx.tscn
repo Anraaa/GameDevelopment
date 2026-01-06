@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://0yj88t5j284r"]
+
+[ext_resource type="AudioStream" uid="uid://bnmc6rduyttpf" path="res://assets/Audio/music/17997_1464269733.mp3" id="1_x70cp"]
+
+[node name="HoeSFX" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_x70cp")

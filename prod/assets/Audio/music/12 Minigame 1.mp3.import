@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://boq2kf1585dc2"
+path="res://.godot/imported/12 Minigame 1.mp3-37d1fee09088b3f7a71b3410430d6257.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/music/12 Minigame 1.mp3"
+dest_files=["res://.godot/imported/12 Minigame 1.mp3-37d1fee09088b3f7a71b3410430d6257.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

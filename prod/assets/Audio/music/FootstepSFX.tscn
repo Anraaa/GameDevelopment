@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxsfpwc6wvkik"]
+
+[ext_resource type="AudioStream" uid="uid://t16fdytu1ie6" path="res://assets/Audio/music/mixkit-walking-on-grass-1921.mp3" id="1_wbbl4"]
+
+[node name="FootstepSfx" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_wbbl4")

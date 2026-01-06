@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://0o211l7ndbq7"]
+
+[ext_resource type="AudioStream" uid="uid://44g75qstjoeb" path="res://assets/Audio/sfx/Chicken (2).wav" id="1_0sfb5"]
+
+[node name="chikensfx2" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_0sfb5")
+bus = &"sfx"

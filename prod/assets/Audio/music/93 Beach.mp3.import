@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bc58ppbwt2yh6"
+path="res://.godot/imported/93 Beach.mp3-fe96b84aa858660b11d9fc56e0ae3ad6.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/music/93 Beach.mp3"
+dest_files=["res://.godot/imported/93 Beach.mp3-fe96b84aa858660b11d9fc56e0ae3ad6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

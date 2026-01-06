@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ddcrqv2iox8lj"
+path="res://.godot/imported/03 Summer.mp3-cb1bae0fd9bd9e365feb400b22741f8f.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/music/03 Summer.mp3"
+dest_files=["res://.godot/imported/03 Summer.mp3-cb1bae0fd9bd9e365feb400b22741f8f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

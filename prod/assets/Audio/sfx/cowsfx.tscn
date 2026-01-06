@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwbucbvpy8u17"]
+
+[ext_resource type="AudioStream" uid="uid://dexel60lryd3c" path="res://assets/Audio/sfx/Cow-Bull (3).wav" id="1_m3txu"]
+
+[node name="cowsfx" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_m3txu")

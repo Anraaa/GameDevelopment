@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsmkvsutqy462"
+path="res://.godot/imported/22 Mary's Theme.mp3-8fa7b6923971a1d31623fd4572cd604e.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/music/22 Mary's Theme.mp3"
+dest_files=["res://.godot/imported/22 Mary's Theme.mp3-8fa7b6923971a1d31623fd4572cd604e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

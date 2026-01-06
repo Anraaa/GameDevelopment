@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0rp810l7nloy"]
+
+[ext_resource type="AudioStream" uid="uid://d28v1tdrj1dl" path="res://assets/Audio/sfx/chopping-wood-96709.mp3" id="1_new22"]
+
+[node name="HitSfx" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_new22")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtxsg24x2srl2"
+path="res://.godot/imported/08 Festival 1 (Fun).mp3-7d093796110643d8dbdb4a71929e26a1.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/music/08 Festival 1 (Fun).mp3"
+dest_files=["res://.godot/imported/08 Festival 1 (Fun).mp3-7d093796110643d8dbdb4a71929e26a1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

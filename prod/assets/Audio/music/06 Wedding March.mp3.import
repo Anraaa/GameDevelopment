@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d22263rxxg874"
+path="res://.godot/imported/06 Wedding March.mp3-7ea0611f0e0b7dffdd4cf6bf6ce82f86.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/music/06 Wedding March.mp3"
+dest_files=["res://.godot/imported/06 Wedding March.mp3-7ea0611f0e0b7dffdd4cf6bf6ce82f86.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

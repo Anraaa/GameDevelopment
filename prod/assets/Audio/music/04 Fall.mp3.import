@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dm2ctbufk81bl"
+path="res://.godot/imported/04 Fall.mp3-688c291aec9a1de8aeb3bfa71546f72b.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/music/04 Fall.mp3"
+dest_files=["res://.godot/imported/04 Fall.mp3-688c291aec9a1de8aeb3bfa71546f72b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

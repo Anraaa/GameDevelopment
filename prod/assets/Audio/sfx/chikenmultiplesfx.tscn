@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://djku15tsqbnqs"]
+
+[ext_resource type="AudioStream" uid="uid://cogxaajrll0kw" path="res://assets/Audio/sfx/Chicken (1).wav" id="1_wpkh2"]
+[ext_resource type="AudioStream" uid="uid://44g75qstjoeb" path="res://assets/Audio/sfx/Chicken (2).wav" id="2_g4686"]
+[ext_resource type="AudioStream" uid="uid://hoaqmnxevurd" path="res://assets/Audio/sfx/Chicken (3).wav" id="3_oni5p"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cn0da"]
+streams_count = 3
+stream_0/stream = ExtResource("1_wpkh2")
+stream_1/stream = ExtResource("2_g4686")
+stream_2/stream = ExtResource("3_oni5p")
+
+[node name="chikenmultiplesfx" type="AudioStreamPlayer2D"]
+stream = SubResource("AudioStreamRandomizer_cn0da")

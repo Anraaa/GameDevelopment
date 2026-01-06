@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgd6amfu7rnbv"
+path="res://.godot/imported/95 Night.mp3-f6ec152055f118fd9d1af8fe9d30f538.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/music/95 Night.mp3"
+dest_files=["res://.godot/imported/95 Night.mp3-f6ec152055f118fd9d1af8fe9d30f538.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

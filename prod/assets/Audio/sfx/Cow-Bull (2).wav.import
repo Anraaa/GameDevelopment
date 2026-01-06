@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cj0322ij0ey2j"
+path="res://.godot/imported/Cow-Bull (2).wav-1f81ca42f1a1df7399f2da6cf5281e94.sample"
+
+[deps]
+
+source_file="res://assets/Audio/sfx/Cow-Bull (2).wav"
+dest_files=["res://.godot/imported/Cow-Bull (2).wav-1f81ca42f1a1df7399f2da6cf5281e94.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

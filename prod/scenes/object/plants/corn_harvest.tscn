@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbfuuxjdp1af2"]
+
+[ext_resource type="Texture2D" uid="uid://b840fptisab27" path="res://assets/game/Objects/Basic_Plants.png" id="1_thb7m"]
+[ext_resource type="PackedScene" uid="uid://cll04nk4wb02v" path="res://scenes/components/collectable_component.tscn" id="2_tbwno"]
+
+[sub_resource type="GDScript" id="GDScript_thb7m"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thb7m"]
+atlas = ExtResource("1_thb7m")
+region = Rect2(80.7416, 0, 14.2584, 15)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hipsh"]
+
+[node name="CornHarvest" type="Node2D"]
+z_index = 1
+script = SubResource("GDScript_thb7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_thb7m")
+
+[node name="CollectableComponent" parent="Sprite2D" instance=ExtResource("2_tbwno")]
+z_index = 1
+position = Vector2(2, 3)
+collision_layer = 162
+collectable_name = "corn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CollectableComponent"]
+position = Vector2(-2, -3)
+shape = SubResource("CircleShape2D_hipsh")
