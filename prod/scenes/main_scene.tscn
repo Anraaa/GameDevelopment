@@ -12,15 +12,15 @@
 [ext_resource type="PackedScene" uid="uid://chghpxh1c7qhe" path="res://assets/Audio/sfx/music_player.tscn" id="10_6wevv"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_rt2n2"]
-vertices = PackedVector2Array(286, 257.461, 297, 256.961, 297, 257, 136, 385, 136, 289, 409, 85, 414, 85, 414, 225, 286, 225, 409, 257, 409, 261, 414, 261, 414, 385, 132, 289, 132, 245, 136, 245, 136, 81, 409, 81)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(2, 9, 10, 3), PackedInt32Array(10, 11, 12, 3), PackedInt32Array(0, 4, 13, 14, 15), PackedInt32Array(8, 0, 15, 16), PackedInt32Array(8, 16, 17, 5)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(288, 64, 433, 64, 426, 209, 424, 278, 430, 398, 315, 402, 220, 403, 122, 410, 122, 65, 191, 63)])
+vertices = PackedVector2Array(293.45313, 304.0078, 212, 308.85938, 212, 296, 234, 252, 260, 252, 298, 296, 373, 172, 377.5703, 172, 376.9922, 201.5, 229, 172, 234, 172, 260, 172, 265, 172, 378, 209.92969, 378, 296, 265, 168, 373, 168, 132, 296, 132, 168, 229, 168, 298, 303.78125)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8), PackedInt32Array(9, 10, 3, 2), PackedInt32Array(5, 4, 11, 12, 13, 14), PackedInt32Array(12, 15, 16, 6), PackedInt32Array(2, 17, 18, 19, 9), PackedInt32Array(5, 20, 0), PackedInt32Array(13, 12, 6, 8)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(303, 151, 388, 150, 387, 201, 396, 276, 395, 309, 294, 314, 210, 319, 117, 315, 121, 148, 205, 151)])
 source_geometry_mode = 2
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_c16ls"]
-vertices = PackedVector2Array(357.203, 127.797, 346.75, 262, 300.148, 262, 167.453, 260, 48.9297, 250.742, 48.0625, 122.18)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(368, 118, 356, 272, 300, 272, 167, 270, 39, 260, 38, 112)])
+vertices = PackedVector2Array(242, 193, 264, 253, 264, 261.4375, 194, 260.39063, 194, 253, 216, 193, 211, 113, 216, 113, 242, 113, 247, 113, 247, 109, 339, 109, 339, 113, 344, 113, 344, 253, 114, 253, 114, 109, 211, 109)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 5), PackedInt32Array(0, 8, 9, 1), PackedInt32Array(9, 10, 11, 12, 1), PackedInt32Array(12, 13, 14, 1), PackedInt32Array(5, 4, 15, 16, 6), PackedInt32Array(17, 6, 16)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(366, 80, 368, 260, 300, 272, 167, 270, 100, 274, 99, 85)])
 source_geometry_mode = 2
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_18nlu"]
@@ -44,7 +44,7 @@ y_sort_enabled = true
 y_sort_enabled = true
 
 [node name="Level1" parent="GameRoot/levelRoot" instance=ExtResource("2_pu3yx")]
-position = Vector2(-1290, -1031)
+position = Vector2(-1469, -1051)
 
 [node name="Chickens" type="Node2D" parent="GameRoot/levelRoot/Level1"]
 y_sort_enabled = true
