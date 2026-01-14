@@ -9,7 +9,7 @@ extends Node2D
 
 signal max_damaged_reached
 
-@export var item_scene: PackedScene =preload("res://scenes/object/trees/small_tree.tscn")
+@export var item_scene: PackedScene =preload("res://scenes/object/trees/log.tscn")
 
 func apply_damage(damage: int) -> void:
 	current_damage = clamp(current_damage + damage, 0, max_damage)

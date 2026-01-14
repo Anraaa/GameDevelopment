@@ -1,0 +1,48 @@
+[gd_scene load_steps=11 format=3 uid="uid://b8twwmio8n7mv"]
+
+[ext_resource type="Texture2D" uid="uid://5fw4vyll22a7" path="res://assets/game/Objects/Basic_Grass_Biom_things.png" id="1_66b0w"]
+[ext_resource type="Shader" uid="uid://dk0imjj4v0q4c" path="res://scenes/object/trees/tree_shake.gdshader" id="1_bwbyw"]
+[ext_resource type="PackedScene" uid="uid://b6vcxafwryaha" path="res://scenes/components/hurt_component.tscn" id="2_2xj1e"]
+[ext_resource type="Script" uid="uid://bxgn7lc36a2yk" path="res://scenes/object/trees/large_tree.gd" id="2_yu4j8"]
+[ext_resource type="PackedScene" uid="uid://dhrrlwfgng8j2" path="res://scenes/components/damage_component.tscn" id="3_qq8ww"]
+[ext_resource type="PackedScene" uid="uid://vby2fard06b2" path="res://assets/Audio/music/HitSFX.tscn" id="4_gjt74"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5tr00"]
+shader = ExtResource("1_bwbyw")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xj1e"]
+atlas = ExtResource("1_66b0w")
+region = Rect2(16, 0, 32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qq8ww"]
+radius = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xj1e"]
+size = Vector2(8.75, 20)
+
+[node name="LargeTree" type="Sprite2D"]
+material = SubResource("ShaderMaterial_5tr00")
+texture = SubResource("AtlasTexture_2xj1e")
+script = ExtResource("2_yu4j8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_qq8ww")
+
+[node name="HurtComponent" parent="." instance=ExtResource("2_2xj1e")]
+
+[node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_2xj1e")
+debug_color = Color(0.9548591, 2.887845e-06, 0.5487677, 0.41960785)
+
+[node name="DamageComponent" parent="." instance=ExtResource("3_qq8ww")]
+position = Vector2(0, -1)
+
+[node name="HitSfx" parent="." instance=ExtResource("4_gjt74")]
+position = Vector2(0, -1)
