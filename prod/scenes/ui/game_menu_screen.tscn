@@ -64,6 +64,7 @@ theme_override_fonts/font = ExtResource("4_jk4o3")
 text = "Exit"
 
 [node name="MusicPlayer" parent="." instance=ExtResource("6_ecc0l")]
+stream = null
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SaveGameButton" to="." method="_on_save_game_button_pressed"]

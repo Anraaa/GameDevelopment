@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://dh3rcqgoqeu11"]
+
+[ext_resource type="Texture2D" uid="uid://5fw4vyll22a7" path="res://assets/game/Objects/Basic_Grass_Biom_things.png" id="1_olweu"]
+[ext_resource type="PackedScene" uid="uid://b6vcxafwryaha" path="res://scenes/components/hurt_component.tscn" id="2_334h3"]
+[ext_resource type="PackedScene" uid="uid://dhrrlwfgng8j2" path="res://scenes/components/damage_component.tscn" id="4_r2dcs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snm7a"]
+atlas = ExtResource("1_olweu")
+region = Rect2(51, 1, 25, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_334h3"]
+size = Vector2(7, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18dqw"]
+size = Vector2(28, 28)
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = SubResource("AtlasTexture_snm7a")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 10)
+shape = SubResource("RectangleShape2D_334h3")
+
+[node name="HurtComponent" parent="." instance=ExtResource("2_334h3")]
+is_permanen = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_18dqw")
+
+[node name="DamageComponent" parent="." instance=ExtResource("4_r2dcs")]

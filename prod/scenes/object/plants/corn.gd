@@ -6,7 +6,7 @@ var harvest_drop_scene = preload("res://scenes/object/plants/corn_harvest.tscn")
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var watering_particles: GPUParticles2D = $WateringParticles
 @onready var flowering_particles: GPUParticles2D = $FloweringParticles
-@onready var growth_cycle_component: GrowthCycleComponent = $GrowthCycleComponent
+@onready var growth_cycle_component = $GrowthCycleComponent
 @onready var hurt_component: HurtComponent = $HurtComponent
 
 var growth_state: DataTypes.GrowthStates = DataTypes.GrowthStates.Seed

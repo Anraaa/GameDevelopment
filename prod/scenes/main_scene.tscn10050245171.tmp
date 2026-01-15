@@ -1,0 +1,254 @@
+[gd_scene load_steps=17 format=3 uid="uid://cyjbpjgtnwk68"]
+
+[ext_resource type="PackedScene" uid="uid://d3avjpjqewgwa" path="res://scenes/components/mouse_cursor_component.tscn" id="1_18nlu"]
+[ext_resource type="PackedScene" uid="uid://c7sexd7neb8j1" path="res://scenes/components/day_night_cycle_component.tscn" id="1_pw63i"]
+[ext_resource type="PackedScene" uid="uid://d051no8bwqkwu" path="res://scenes/ui/game_screen.tscn" id="2_7ykc4"]
+[ext_resource type="PackedScene" uid="uid://blbtxmku8i4dk" path="res://scenes/levels/level_1.tscn" id="2_pu3yx"]
+[ext_resource type="PackedScene" uid="uid://dbttvcy1xjt4x" path="res://scenes/characters/player/player.tscn" id="3_pu3yx"]
+[ext_resource type="PackedScene" uid="uid://c0ynq374i2nj" path="res://scenes/characters/guide/guide.tscn" id="5_c16ls"]
+[ext_resource type="PackedScene" uid="uid://xnaeui78une5" path="res://scenes/characters/chicken/chicken.tscn" id="5_gubc5"]
+[ext_resource type="PackedScene" uid="uid://cq813yw1qqrap" path="res://scenes/characters/cow/cow.tscn" id="6_rt2n2"]
+[ext_resource type="PackedScene" uid="uid://3a3wufwgwp22" path="res://assets/Audio/music/music_menu.tscn" id="9_c1pb6"]
+[ext_resource type="PackedScene" uid="uid://chghpxh1c7qhe" path="res://assets/Audio/sfx/music_player.tscn" id="10_6wevv"]
+[ext_resource type="Script" path="res://scenes/game_ui.gd" id="11_e1cbu"]
+[ext_resource type="PackedScene" uid="uid://d21a0gg4fcdnp" path="res://scenes/components/save_data_component.tscn" id="12_mngbo"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_rt2n2"]
+vertices = PackedVector2Array(286, 257.46094, 297, 256.96094, 297, 257, 221.84375, 383, 414, 261, 414, 384.34375, 369.14844, 383, 409, 261, 159.99219, 385, 139.03125, 385, 139.96875, 81.64844, 158.57031, 81, 286, 225, 409, 85, 414, 85, 414, 225, 409, 257, 409, 81)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(0, 3, 8, 9, 10, 11, 12), PackedInt32Array(13, 14, 15, 12), PackedInt32Array(2, 16, 7, 6, 3), PackedInt32Array(12, 11, 17, 13)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(318, 63, 428, 67, 428, 212, 435, 278, 435, 395, 369, 393, 222, 393, 129, 396, 130, 72, 187, 70)])
+source_geometry_mode = 2
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_c16ls"]
+vertices = PackedVector2Array(347, 133, 351.10938, 133, 347.1328, 241, 240, 241, 218, 213, 240, 261.09375, 170, 260.03906, 170, 241, 192, 213, 187, 133, 192, 133, 218, 133, 223, 133, 223, 129, 347, 129, 58, 241, 58, 129, 187, 129)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 5, 6, 7, 8), PackedInt32Array(9, 10, 8, 7), PackedInt32Array(4, 11, 12, 3), PackedInt32Array(12, 13, 14, 0, 3), PackedInt32Array(7, 15, 16, 17, 9)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(362, 109, 356, 272, 300, 272, 167, 270, 45, 255, 47, 109)])
+source_geometry_mode = 2
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_18nlu"]
+vertices = PackedVector2Array(352.609, 250.891, 353, 250.852, 353, 259.461, 364, 258.961, 364, 259, 299.063, 307, 299, 305.703, 236.742, 235.156, 235.383, 183, 251, 183, 295.523, 236.156, 412, 259, 412, 263, 417, 263, 417, 307, 346.609, 147, 299, 243, 324.063, 147, 251, 149.258, 295.859, 243)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(2, 3, 4, 5, 6), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(4, 11, 12, 5), PackedInt32Array(12, 13, 14, 5), PackedInt32Array(15, 0, 2, 6, 16, 17), PackedInt32Array(9, 18, 17, 10), PackedInt32Array(10, 17, 16, 19)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(356, 136, 362, 240, 409, 236, 434, 244, 431, 321, 290, 326, 286, 246, 227, 245, 225, 169, 227, 140)])
+source_geometry_mode = 2
+
+[sub_resource type="Resource" id="Resource_mngbo"]
+
+[node name="MainScene" type="Node"]
+
+[node name="MusicMenu" parent="." instance=ExtResource("9_c1pb6")]
+stream = null
+
+[node name="mousecursorcomponent" parent="." instance=ExtResource("1_18nlu")]
+
+[node name="DayNightCycleComponent" parent="." instance=ExtResource("1_pw63i")]
+
+[node name="GameRoot" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="levelRoot" type="Node2D" parent="GameRoot"]
+y_sort_enabled = true
+
+[node name="Level1" parent="GameRoot/levelRoot" instance=ExtResource("2_pu3yx")]
+position = Vector2(-1290, -1031)
+
+[node name="Chickens" type="Node2D" parent="GameRoot/levelRoot/Level1"]
+y_sort_enabled = true
+position = Vector2(1290, 1031)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="GameRoot/levelRoot/Level1/Chickens"]
+position = Vector2(-121, -361)
+navigation_polygon = SubResource("NavigationPolygon_rt2n2")
+
+[node name="Chicken" parent="GameRoot/levelRoot/Level1/Chickens" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(86, -152)
+
+[node name="Chicken2" parent="GameRoot/levelRoot/Level1/Chickens" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(60, -182)
+
+[node name="Chicken3" parent="GameRoot/levelRoot/Level1/Chickens" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(58, -124)
+
+[node name="Chicken4" parent="GameRoot/levelRoot/Level1/Chickens" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(205, -175)
+
+[node name="Chicken5" parent="GameRoot/levelRoot/Level1/Chickens" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(249, -135)
+
+[node name="Chicken6" parent="GameRoot/levelRoot/Level1/Chickens" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(205, -105)
+
+[node name="Cows" type="Node2D" parent="GameRoot/levelRoot/Level1"]
+y_sort_enabled = true
+position = Vector2(1290, 1031)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="GameRoot/levelRoot/Level1/Cows"]
+position = Vector2(585, -382)
+navigation_polygon = SubResource("NavigationPolygon_c16ls")
+navigation_layers = 2
+
+[node name="Cow" parent="GameRoot/levelRoot/Level1/Cows" instance=ExtResource("6_rt2n2")]
+z_index = 1
+position = Vector2(769, -177)
+
+[node name="Cow2" parent="GameRoot/levelRoot/Level1/Cows" instance=ExtResource("6_rt2n2")]
+z_index = 1
+position = Vector2(832, -160)
+
+[node name="Cow3" parent="GameRoot/levelRoot/Level1/Cows" instance=ExtResource("6_rt2n2")]
+z_index = 1
+position = Vector2(907, -166)
+
+[node name="Chickens2" type="Node2D" parent="GameRoot/levelRoot/Level1"]
+y_sort_enabled = true
+position = Vector2(1290, 1031)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="GameRoot/levelRoot/Level1/Chickens2"]
+position = Vector2(896, -260)
+navigation_polygon = SubResource("NavigationPolygon_18nlu")
+
+[node name="Chicken" parent="GameRoot/levelRoot/Level1/Chickens2" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(1248, 43)
+
+[node name="Chicken2" parent="GameRoot/levelRoot/Level1/Chickens2" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(1233, -17)
+
+[node name="Chicken3" parent="GameRoot/levelRoot/Level1/Chickens2" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(1171, -62)
+
+[node name="Chicken4" parent="GameRoot/levelRoot/Level1/Chickens2" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(1156, -85)
+
+[node name="Chicken5" parent="GameRoot/levelRoot/Level1/Chickens2" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(1218, -77)
+
+[node name="Chicken6" parent="GameRoot/levelRoot/Level1/Chickens2" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(1185, 38)
+
+[node name="Cows2" type="Node2D" parent="GameRoot/levelRoot/Level1"]
+y_sort_enabled = true
+position = Vector2(1290, 1031)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="GameRoot/levelRoot/Level1/Cows2"]
+position = Vector2(400, 189)
+navigation_polygon = SubResource("NavigationPolygon_c16ls")
+navigation_layers = 2
+
+[node name="Cow" parent="GameRoot/levelRoot/Level1/Cows2" instance=ExtResource("6_rt2n2")]
+z_index = 1
+position = Vector2(535, 376)
+
+[node name="Cow2" parent="GameRoot/levelRoot/Level1/Cows2" instance=ExtResource("6_rt2n2")]
+z_index = 1
+position = Vector2(666, 393)
+
+[node name="Cow3" parent="GameRoot/levelRoot/Level1/Cows2" instance=ExtResource("6_rt2n2")]
+z_index = 1
+position = Vector2(671, 335)
+
+[node name="Cow4" parent="GameRoot/levelRoot/Level1/Cows2" instance=ExtResource("6_rt2n2")]
+z_index = 1
+position = Vector2(579, 331)
+
+[node name="Cows3" type="Node2D" parent="GameRoot/levelRoot/Level1"]
+y_sort_enabled = true
+position = Vector2(2623, 2044)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="GameRoot/levelRoot/Level1/Cows3"]
+position = Vector2(-1060, 201)
+navigation_polygon = SubResource("NavigationPolygon_c16ls")
+navigation_layers = 2
+
+[node name="Cow" parent="GameRoot/levelRoot/Level1/Cows3" instance=ExtResource("6_rt2n2")]
+z_index = 1
+position = Vector2(-864, 370)
+
+[node name="Cow2" parent="GameRoot/levelRoot/Level1/Cows3" instance=ExtResource("6_rt2n2")]
+z_index = 1
+position = Vector2(-728, 378)
+
+[node name="Cow3" parent="GameRoot/levelRoot/Level1/Cows3" instance=ExtResource("6_rt2n2")]
+z_index = 1
+position = Vector2(-820, 421)
+
+[node name="Cow4" parent="GameRoot/levelRoot/Level1/Cows3" instance=ExtResource("6_rt2n2")]
+z_index = 1
+position = Vector2(-940, 366)
+
+[node name="Chickens3" type="Node2D" parent="GameRoot/levelRoot/Level1"]
+y_sort_enabled = true
+position = Vector2(1290, 1031)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="GameRoot/levelRoot/Level1/Chickens3"]
+position = Vector2(1139, 1918)
+navigation_polygon = SubResource("NavigationPolygon_rt2n2")
+
+[node name="Chicken" parent="GameRoot/levelRoot/Level1/Chickens3" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(1364, 2262)
+
+[node name="Chicken2" parent="GameRoot/levelRoot/Level1/Chickens3" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(1498, 2315)
+
+[node name="Chicken3" parent="GameRoot/levelRoot/Level1/Chickens3" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(1467, 2048)
+
+[node name="Chicken4" parent="GameRoot/levelRoot/Level1/Chickens3" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(1328, 2068)
+
+[node name="Chicken5" parent="GameRoot/levelRoot/Level1/Chickens3" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(1365, 2157)
+
+[node name="Chicken6" parent="GameRoot/levelRoot/Level1/Chickens3" instance=ExtResource("5_gubc5")]
+z_index = 1
+position = Vector2(1301, 2196)
+
+[node name="Guide" parent="GameRoot/levelRoot" instance=ExtResource("5_c16ls")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(328, 88)
+
+[node name="Player" parent="GameRoot" instance=ExtResource("3_pu3yx")]
+z_index = 1
+position = Vector2(187, 145)
+
+[node name="Camera2D" type="Camera2D" parent="GameRoot/Player"]
+
+[node name="GameScreen" parent="." instance=ExtResource("2_7ykc4")]
+
+[node name="MusicPlayer" parent="." instance=ExtResource("10_6wevv")]
+stream = null
+
+[node name="GameUI" type="CanvasLayer" parent="."]
+script = ExtResource("11_e1cbu")
+
+[node name="NotificationLabel" type="Label" parent="GameUI"]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Butuh Kapak!"
+
+[node name="SaveDataComponent" parent="." instance=ExtResource("12_mngbo")]
+save_data_resource = SubResource("Resource_mngbo")

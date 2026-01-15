@@ -19,16 +19,17 @@ var cell_source_id: int
 var distance: float
 
 func _input(event: InputEvent) -> void:
-	# Cek apakah player ada sebelum lanjut (untuk mencegah error saat game baru mulai/player mati)
 	if not player:
 		return
 
-	if event.is_action_pressed("remove_dirt"):
+	# Gunakan event.is_action_pressed(aksi, false) 
+	# Parameter 'false' artinya "jangan looping kalau tombol ditahan"
+	if event.is_action_pressed("remove_dirt", false):
 		if ToolManager.selected_tool == DataTypes.Tools.TillGround:
 			get_cell_under_mouse()
 			remove_tilled_soil_cell()
 			
-	elif event.is_action_pressed("hit"):
+	elif event.is_action_pressed("hit", false):
 		if ToolManager.selected_tool == DataTypes.Tools.TillGround:
 			get_cell_under_mouse()
 			add_tilled_soil_cell()
