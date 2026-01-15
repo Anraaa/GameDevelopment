@@ -14,16 +14,18 @@ func _ready() -> void:
 
 func save_node_data() -> void:
 	var nodes = get_tree().get_nodes_in_group("save_data_component")
-	
 	game_data_resource = SaveGameDataResource.new()
 	
 	if nodes != null:
-		for node: SaveDataComponent in nodes:
+		for node in nodes:
 			if node is SaveDataComponent:
-				var save_data_resource: NodeDataResource = node._save_data()
-				var save_final_resource = save_data_resource.duplicate()
-				game_data_resource.save_data_nodes.append(save_final_resource)
-
+				var save_data_resource = node._save_data()
+				# CEK: Hanya duplikasi jika data TIDAK NULL
+				if save_data_resource != null:
+					var save_final_resource = save_data_resource.duplicate()
+					game_data_resource.save_data_nodes.append(save_final_resource)
+				else:
+					print("Peringatan: Node ", node.get_parent().name, " punya SaveDataComponent tapi Resource-nya kosong!")
 
 func save_game() -> void:
 	if !DirAccess.dir_exists_absolute(save_game_data_path):

@@ -15,7 +15,7 @@ shader_parameter/shake_speed = 20.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ku5ue"]
 atlas = ExtResource("1_ku5ue")
-region = Rect2(0, 0, 16, 32)
+region = Rect2(0, -1, 15, 28)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ku5ue"]
 radius = 4.12311
@@ -48,3 +48,4 @@ position = Vector2(0, -1)
 
 [node name="HitSfx" parent="." instance=ExtResource("6_sq1qc")]
 position = Vector2(0, -1)
+stream = null

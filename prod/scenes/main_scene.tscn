@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cyjbpjgtnwk68"]
+[gd_scene load_steps=17 format=3 uid="uid://cyjbpjgtnwk68"]
 
 [ext_resource type="PackedScene" uid="uid://d3avjpjqewgwa" path="res://scenes/components/mouse_cursor_component.tscn" id="1_18nlu"]
 [ext_resource type="PackedScene" uid="uid://c7sexd7neb8j1" path="res://scenes/components/day_night_cycle_component.tscn" id="1_pw63i"]
@@ -10,17 +10,19 @@
 [ext_resource type="PackedScene" uid="uid://cq813yw1qqrap" path="res://scenes/characters/cow/cow.tscn" id="6_rt2n2"]
 [ext_resource type="PackedScene" uid="uid://3a3wufwgwp22" path="res://assets/Audio/music/music_menu.tscn" id="9_c1pb6"]
 [ext_resource type="PackedScene" uid="uid://chghpxh1c7qhe" path="res://assets/Audio/sfx/music_player.tscn" id="10_6wevv"]
+[ext_resource type="Script" path="res://scenes/game_ui.gd" id="11_e1cbu"]
+[ext_resource type="PackedScene" uid="uid://d21a0gg4fcdnp" path="res://scenes/components/save_data_component.tscn" id="12_mngbo"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_rt2n2"]
-vertices = PackedVector2Array(293.45313, 304.0078, 212, 308.85938, 212, 296, 234, 252, 260, 252, 298, 296, 373, 172, 377.5703, 172, 376.9922, 201.5, 229, 172, 234, 172, 260, 172, 265, 172, 378, 209.92969, 378, 296, 265, 168, 373, 168, 132, 296, 132, 168, 229, 168, 298, 303.78125)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8), PackedInt32Array(9, 10, 3, 2), PackedInt32Array(5, 4, 11, 12, 13, 14), PackedInt32Array(12, 15, 16, 6), PackedInt32Array(2, 17, 18, 19, 9), PackedInt32Array(5, 20, 0), PackedInt32Array(13, 12, 6, 8)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(303, 151, 388, 150, 387, 201, 396, 276, 395, 309, 294, 314, 210, 319, 117, 315, 121, 148, 205, 151)])
+vertices = PackedVector2Array(286, 257.46094, 297, 256.96094, 297, 257, 221.84375, 383, 414, 261, 414, 384.34375, 369.14844, 383, 409, 261, 159.99219, 385, 139.03125, 385, 139.96875, 81.64844, 158.57031, 81, 286, 225, 409, 85, 414, 85, 414, 225, 409, 257, 409, 81)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(0, 3, 8, 9, 10, 11, 12), PackedInt32Array(13, 14, 15, 12), PackedInt32Array(2, 16, 7, 6, 3), PackedInt32Array(12, 11, 17, 13)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(318, 63, 428, 67, 428, 212, 435, 278, 435, 395, 369, 393, 222, 393, 129, 396, 130, 72, 187, 70)])
 source_geometry_mode = 2
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_c16ls"]
-vertices = PackedVector2Array(242, 193, 264, 253, 264, 261.4375, 194, 260.39063, 194, 253, 216, 193, 211, 113, 216, 113, 242, 113, 247, 113, 247, 109, 339, 109, 339, 113, 344, 113, 344, 253, 114, 253, 114, 109, 211, 109)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 5), PackedInt32Array(0, 8, 9, 1), PackedInt32Array(9, 10, 11, 12, 1), PackedInt32Array(12, 13, 14, 1), PackedInt32Array(5, 4, 15, 16, 6), PackedInt32Array(17, 6, 16)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(366, 80, 368, 260, 300, 272, 167, 270, 100, 274, 99, 85)])
+vertices = PackedVector2Array(347, 133, 351.10938, 133, 347.1328, 241, 240, 241, 218, 213, 240, 261.09375, 170, 260.03906, 170, 241, 192, 213, 187, 133, 192, 133, 218, 133, 223, 133, 223, 129, 347, 129, 58, 241, 58, 129, 187, 129)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 5, 6, 7, 8), PackedInt32Array(9, 10, 8, 7), PackedInt32Array(4, 11, 12, 3), PackedInt32Array(12, 13, 14, 0, 3), PackedInt32Array(7, 15, 16, 17, 9)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(362, 109, 356, 272, 300, 272, 167, 270, 45, 255, 47, 109)])
 source_geometry_mode = 2
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_18nlu"]
@@ -29,9 +31,12 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(
 outlines = Array[PackedVector2Array]([PackedVector2Array(356, 136, 362, 240, 409, 236, 434, 244, 431, 321, 290, 326, 286, 246, 227, 245, 225, 169, 227, 140)])
 source_geometry_mode = 2
 
+[sub_resource type="Resource" id="Resource_mngbo"]
+
 [node name="MainScene" type="Node"]
 
 [node name="MusicMenu" parent="." instance=ExtResource("9_c1pb6")]
+stream = null
 
 [node name="mousecursorcomponent" parent="." instance=ExtResource("1_18nlu")]
 
@@ -44,7 +49,7 @@ y_sort_enabled = true
 y_sort_enabled = true
 
 [node name="Level1" parent="GameRoot/levelRoot" instance=ExtResource("2_pu3yx")]
-position = Vector2(-1469, -1051)
+position = Vector2(-1290, -1031)
 
 [node name="Chickens" type="Node2D" parent="GameRoot/levelRoot/Level1"]
 y_sort_enabled = true
@@ -227,3 +232,23 @@ position = Vector2(187, 145)
 [node name="GameScreen" parent="." instance=ExtResource("2_7ykc4")]
 
 [node name="MusicPlayer" parent="." instance=ExtResource("10_6wevv")]
+stream = null
+
+[node name="GameUI" type="CanvasLayer" parent="."]
+script = ExtResource("11_e1cbu")
+
+[node name="NotificationLabel" type="Label" parent="GameUI"]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Butuh Kapak!"
+
+[node name="SaveDataComponent" parent="." instance=ExtResource("12_mngbo")]
+save_data_resource = SubResource("Resource_mngbo")
